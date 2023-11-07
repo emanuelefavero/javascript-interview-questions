@@ -32,4 +32,23 @@ console.log(arr2) // [1, 2, 3]
 let arr3 = [...arr, ...arr2]
 console.log(arr3) // [1, 2, 3, 1, 2, 3]
 
+// * Arguments Object
+// The arguments object is an array-like object that contains the arguments passed to a function
+function test() {
+  console.log(arguments)
+}
+
+test(1, 2, 3) // [1, 2, 3]
+
+// NOTE: You can't use the arguments object with arrow functions
+
 // * QUESTIONS
+
+// Q: Can we use arguments object in arrow function?
+// A: No, we cannot
+
+// Q: How can you have 'n' number of parameters in a function?
+// A: Using the rest operator
+
+// Q: Can the rest operator be used as the first argument?
+// A: No, it cannot
