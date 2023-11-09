@@ -10,3 +10,12 @@ console.log(NaN === NaN) // false
 
 // TIP: You can also use isFinite() to check if a value is NaN
 console.log(isFinite(1 / 'hello')) // false, isFinite() checks if a value is a regular number or not
+
+// ---------------------------------------------------------------
+// QUESTIONS
+
+// Q: What will be the output of this code? console.log(NaN == NaN)
+// A: false, strict equality or not, NaN is never equal to NaN
+
+// Q: What is the difference between isNaN() and isFinite()?
+// A: isNaN() checks if a value is NaN while isFinite() checks if a value is a regular number or not
