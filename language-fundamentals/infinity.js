@@ -30,3 +30,13 @@ function checkNum(num) {
 }
 
 console.log(checkNum(num)) // Number is too large
+
+// To check if a number is finite or infinite you can also use isFinite()
+console.log(isFinite(num)) // false
+
+// QUESTIONS
+// Q: How will you put a validation for positive or negative Infinity?
+// A: You can use the isFinite() method or check if the number is equal to Infinity or -Infinity
+
+// Q: What will be the output of this code? console.log(1 / 0)
+// A: Infinity
