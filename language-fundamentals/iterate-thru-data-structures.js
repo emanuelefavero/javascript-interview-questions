@@ -62,3 +62,66 @@ Object.entries(obj).forEach(([key, value]) => {
 Object.entries(obj).map(([key, value]) => {
   console.log(key, value) // name John, age 30
 })
+
+// MAPS
+let map = new Map()
+map.set('name', 'Jack')
+map.set('age', 28)
+
+// 1 - iterate through keys and values of a map
+for (let [key, value] of map) {
+  console.log(key, value) // name John, age 30
+}
+
+// 2 - iterate through keys of a map
+for (let key of map.keys()) {
+  console.log(key) // name, age
+}
+
+// 3 - iterate through values of a map
+for (let value of map.values()) {
+  console.log(value) // John, 30
+}
+
+// 4 - iterate through keys and values of a map using forEach
+map.forEach((value, key) => {
+  console.log(key, value) // name John, age 30
+})
+
+// SETS
+let set = new Set()
+set.add('10')
+set.add('20')
+
+// 1 - iterate through values of a set
+for (let value of set) {
+  console.log(value) // 10, 20
+}
+
+// 2 - iterate through values of a set using forEach
+set.forEach((value) => {
+  console.log(value) // 10, 20
+})
+
+// STRINGS
+let str = 'hello'
+
+// 1 - iterate through characters of a string
+for (let char of str) {
+  console.log(char) // h, e, l, l, o
+}
+
+// 2 - classic for loop
+for (let i = 0; i < str.length; i++) {
+  console.log(str[i]) // h, e, l, l, o
+}
+
+// 3 - iterate through characters of a string using forEach
+str.split('').forEach((char) => {
+  console.log(char) // h, e, l, l, o
+})
+
+// 4 - iterate through characters of a string using map
+str.split('').map((char) => {
+  console.log(char) // h, e, l, l, o
+})
