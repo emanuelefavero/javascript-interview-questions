@@ -27,3 +27,10 @@ const closure2 = counter()
 console.log(closure2()) // 1
 console.log(closure2()) // 2
 console.log(closure2()) // 3
+
+// QUESTIONS
+// Q: How can you access a variable outside its scope?
+// A: Using closures, by returning a function that has access to the variable outside its scope and assigning it to a variable
+
+// Q: Explain the advantages of closures
+// A: The main advantage is that we can access private variables outside their scope
