@@ -1,4 +1,4 @@
-// Closure
+// * Closure
 // A closure is a function that has access to variables from its outer (enclosing) scope even after the outer function has finished execution
 function outer() {
   let a = 10
