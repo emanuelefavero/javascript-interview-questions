@@ -29,11 +29,38 @@ const print = message => {
 const sum = (a, b) => a + b
 
 // IIFE (Immediately Invoked Function Expression)
-(function () {
+;(function () {
   console.log('IIFE')
 })()
 
 // IIAF (Immediately Invoked Arrow Function)
-(() => {
+;(() => {
   console.log('IIAF')
 })()
+
+// QUESTIONS
+// Q: Why does "this" keyword not work in arrow function?
+// A: In ES6 we already have "class" to define a class, so we don't need to use a "function" to define a class. So, arrow function does not need to have "this" keyword (previously we used functions to define a class)
+
+// Q: Explain the output of the following code:
+const obj = {
+  method: () => {
+    console.log(this)
+  }
+}
+
+obj.method()
+
+// A: The output will be the global object since arrow functions do not have their own "this" keyword so "this" will refer to the global object (window in the browser and global in Node.js)
+
+// Q: Since arrow functions do not support "arguments" keyword, how can we get the arguments passed to a function?
+// A: Using the rest operator (...)
+const test4 = (...args) => {
+  console.log(args)
+}
+
+test4(1, 2, 3) // [1, 2, 3]
+
+// Q: Can you write immediately invoked arrow function?
+// A: Yes, you can
+;(() => console.log('IIAF'))()
