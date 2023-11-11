@@ -1,4 +1,4 @@
-// * Iterate through built in data structures
+// * Iterate through data structures
 // ARRAYS
 let array = [1, 2, 3]
 
