@@ -72,3 +72,20 @@ console.log(generator3.next()) // { value: undefined, done: true })
 
 // Explanation: The .return() method tells the generator that we are done iterating even if we didn't reach the end of the generator
 // TIP: We can pass a custom value to the .return() method
+
+// --------------------------------------------------
+// QUESTIONS
+
+// Q: What are generator functions?
+// A: Generator functions are functions that can be paused and resumed. They can return (yield) multiple values
+
+// Q: Which is the correct syntax for a generator function?
+// A: function* {} or function *() {} or function* gen() {}
+
+// Q: Explain all methods of a generator
+// A: The .next() method returns an object with two properties: value and done
+// The .return() method tells the generator that we are done iterating even if we didn't reach the end of the generator
+// The .throw() method throws an error into the generator
+
+// Q: Explain the use of yield*
+// A: The yield* keyword i used to call another generator from a generator
