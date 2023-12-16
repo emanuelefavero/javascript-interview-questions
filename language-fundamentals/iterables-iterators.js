@@ -29,6 +29,26 @@ for (let value of obj) {
   console.log(value) // 10, 11, 12
 }
 
+// --------------------------------------------------
+
+// You can also use generators to make an object iterable
+let obj2 = {
+  start: 100,
+  end: 102,
+
+  // Make the object iterable
+  *[Symbol.iterator]() {
+    for (let current = this.start; current <= this.end; current++) {
+      yield current
+    }
+  },
+}
+
+// Iterate through the object
+for (let value of obj2) {
+  console.log(value) // 100, 101, 102
+}
+
 // QUESTIONS
 // Q: What is the purpose of the iterator?
 // A: The purpose of the iterator is to make ia data structure (such as a object) iterable so that we can use it in a for...of loop
