@@ -19,3 +19,6 @@ obj4    obj5    obj6  obj8
 
 // Objects obj7 and obj8 are not referenced by any variable so they will be swept away by the garbage collector
 */
+
+// Q: When memory leak can happen?
+// A: Memory leak can happen when when programmers create a memory in a heap and forget to delete it. Fortunately JavaScript uses automatic garbage collection so memory leaks are not common in JavaScript. They were more common on older browsers when there was a circular reference between two objects and one of the objects was garbage collected by JavaScript while still being referenced
