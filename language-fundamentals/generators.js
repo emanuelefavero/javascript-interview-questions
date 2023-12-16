@@ -17,6 +17,17 @@ const genFunction = function* () {
 }
 
 const generator = genFunction()
-console.log(generator.next()) // Hello { value: undefined, done: false }
-console.log(generator.next()) // World { value: undefined, done: false }
-console.log(generator.next()) // 😄 { value: 'Yielded value', done: false }
+
+// You can use the .next() method to resume the generator
+// console.log(generator.next()) // Hello { value: undefined, done: false }
+// console.log(generator.next()) // World { value: undefined, done: false }
+// console.log(generator.next()) // 😄 { value: 'Yielded value', done: false }
+
+// You can use a for...of loop to iterate through the generator
+for (let value of generator) {
+  console.log(value) // Hello, World, Yielded value, 😄
+}
+
+// spread operator - You can also use the spread operator to iterate through the generator
+const generator2 = genFunction()
+console.log([...generator2]) // Hello, World, 😄, [ undefined, 'Yielded value' ]
