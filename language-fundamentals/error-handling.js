@@ -45,3 +45,21 @@ try {
 } finally {
   console.log('Finally') // Finally
 }
+
+// --------------------------------------------------
+// QUESTIONS
+
+// Q: When do you need try...catch?
+// A: You need try...catch when you want to handle errors in your code
+
+// Q: How can you generate a custom error?
+// A: You can use the throw statement to generate a custom error
+
+// Q: What is the purpose of the finally statement?
+// A: The finally statement lets you execute code, after try and catch, regardless of the result
+
+// Q: How can you get the name or description of an error?
+// A: You can use the name and message properties of the error object (err.name and err.message)
+
+// Q: Can we have a finally block without a catch block?
+// A: Yes
