@@ -31,3 +31,44 @@ for (let value of generator) {
 // spread operator - You can also use the spread operator to iterate through the generator
 const generator2 = genFunction()
 console.log([...generator2]) // Hello, World, 😄, [ undefined, 'Yielded value' ]
+
+// --------------------------------------------------
+// call another generator from a generator
+
+function* gen0() {
+  console.log('Hi')
+}
+
+function* gen1() {
+  yield* gen0()
+}
+
+gen1().next() // hi
+
+// --------------------------------------------------
+// generators with recursion
+
+function* fib(n, current = 0, next = 1) {
+  if (n === 0) return
+
+  yield current
+
+  yield* fib(n - 1, next, current + next)
+}
+
+console.log([...fib(6)]) // [ 0, 1, 1, 2, 3, 5 ]
+
+// --------------------------------------------------
+
+function* gen() {
+  yield 'One'
+  yield 'Two'
+}
+
+const generator3 = gen()
+console.log(generator3.next()) // { value: 'One', done: false })
+console.log(generator3.return('this is a custom value')) // { value: 'Two', done: false })
+console.log(generator3.next()) // { value: undefined, done: true })
+
+// Explanation: The .return() method tells the generator that we are done iterating even if we didn't reach the end of the generator
+// TIP: We can pass a custom value to the .return() method
