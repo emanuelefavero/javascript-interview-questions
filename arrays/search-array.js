@@ -29,3 +29,21 @@ console.log(ages.findIndex((age) => age > 18)) // 3, index of the first element 
 console.log(ages.filter((age) => age > 18)) // [20, 34], all elements that satisfy the condition
 
 // NOTE: The filter method will not modify the original array
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: What is the difference between find and filter?
+// A: The find method returns the first element that satisfies the condition, while the filter method returns all elements that satisfy the condition as a new array
+
+// Q: If no value satisfies the condition, what will find return?
+// A: undefined
+
+// Q: If no value satisfies the condition, what will findIndex return?
+// A: -1
+
+// Q: What is the difference between indexOf and includes?
+// A: indexOf returns the index of the first element that matches the value, while includes returns true or false
+
+// Q: How will you search multiple values in an array?
+// A: filter method
