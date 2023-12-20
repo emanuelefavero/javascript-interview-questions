@@ -53,3 +53,30 @@ let [f, g = 2] = nums3
 
 console.log(f) // 1
 console.log(g) // 2
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: What is array destructuring?
+// A: Extracting values from arrays and storing them in variables
+
+// Q: Swap values using destructuring
+// A:
+
+let x2 = 1
+let y2 = 2
+
+;[x2, y2] = [y2, x2]
+
+// QL What is the output of the following code?
+let [h, i, j] = [1, , , 3]
+
+// A:
+console.log(h) // 1
+console.log(i) // undefined
+console.log(j) // 3
+
+// Q: How do you set a default value while destructuring?
+// A:
+
+let [k, l = 2] = [1] // k = 1, l = 2
