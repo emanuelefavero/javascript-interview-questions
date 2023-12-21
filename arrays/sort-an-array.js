@@ -58,3 +58,18 @@ console.log(products.sort((a, b) => a.price - b.price))
   { price: 4, productName: 'banana' }
 ]
 */
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: What will the output be if an array has undefined values?
+// A: undefined values will be sorted to the end of the array
+
+// Q: What will the output be if an array has both numbers and strings?
+// A: The numbers will be sorted first, followed by the strings
+
+// Q: How to sort an object array?
+// A: You can sort an object array by specifying the property to sort by (e.g. a.price - b.price)
+
+// Q: How would you sort a numeric array?
+// A: You can sort a numeric array by specifying a - b
