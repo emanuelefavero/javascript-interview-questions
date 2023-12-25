@@ -17,10 +17,6 @@ console.log("hello") // 'hello'
 // we can also use backticks
 console.log(`hello`) // 'hello'
 
-// backticks are used for template literals, which allow us to embed expressions in strings
-let myName = 'John'
-console.log(`My name is ${myName}`) // 'My name is John'
-
 // if we want to use apostrophes in our string, we can use double quotes
 console.log("I'm John") // "I'm John"
 
@@ -32,6 +28,13 @@ console.log(`He said "I'm John"`) // 'He said "I'm John"'
 
 // or we can escape the quotes
 console.log('I\'m John') // I'm John
+
+// ------------------------------------------------------------
+// TEMPLATE LITERALS
+
+// backticks are used for template literals, which allow us to embed expressions in strings
+let myName = 'John'
+console.log(`My name is ${myName}`) // 'My name is John'
 
 // ------------------------------------------------------------
 // ESCAPE CHARACTERS
@@ -53,3 +56,12 @@ console.log('hello\'world') // hello'world
 console.log('hello\"world') // hello"world
 
 // ------------------------------------------------------------
+// ESCAPE UNICODE CHARACTERS
+
+// \uXXXX - unicode character
+console.log('\u0040') // @
+
+// ESCAPE EMOJI UNICODE CHARACTERS (longer than 4 characters)
+
+// \u{XXXXX}
+console.log('\u{1f602}') // 😂
