@@ -33,3 +33,21 @@ console.log(str.charCodeAt(0)) // 104
 // Explanation: 104 is the unicode for 'h'
 
 // ------------------------------------------------------------
+// QUESTIONS
+
+// Q: What will be the output of the below code?
+let str2 = 'hello word'
+console.log(str2.slice(-4, -1)) // 'wor'
+// Explanation: slice from index -4 to index -1 (not including index -1)
+
+// Q: What will be the output of the below code?
+console.log(str2.substring(-5)) // 'hello word'
+// Explanation: substring() converts negative indexes to 0 so it's the same as substring(0). The entire string is returned
+
+// Q: What will be the output of the below code?
+console.log(str2.substring(3, 3)) // ''
+// Explanation: substring() returns an empty string if the first argument is greater or the same as the second argument. The starting index is 3 and the ending index is 3 so an empty string is returned
+
+// Q: What will be the output of the below code?
+console.log(str2.charAt()) // 'h'
+// Explanation: charAt() returns the character at index 0 if no argument is passed
