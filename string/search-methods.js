@@ -24,3 +24,11 @@ console.log(str.indexOf('l', 3)) // 3
 console.log(str.search(/l/)) // 2
 
 // ------------------------------------------------------------
+// * search()
+
+// search() returns the index of the first match of a regex in a string
+console.log(str.search(/(.)\1/)) // 2
+// Explanation: first match of a repeated character is at index 2
+// (.) matches any character, \1 is a back reference to the first captured group, ensuring the next character is the same as the first.
+
+// NOTE: search() can't work with a second argument, use indexOf() instead if you need to specify a starting index
