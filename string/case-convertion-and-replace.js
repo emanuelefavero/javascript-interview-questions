@@ -27,3 +27,30 @@ console.log(str4.replace(/l/g, 'x')) // 'hexxo worxd'
 
 // TIP: If you dont' pass a second argument, the value will be replaced with undefined
 console.log(str4.replace('hello')) // 'undefined world'
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: Get a character from the user and check wether the character is a vowel or a consonant
+const readline = require('readline')
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+})
+
+rl.question('Enter a character: ', (answer) => {
+  let vowels = new Map()
+  vowels.set('a', true)
+  vowels.set('e', true)
+  vowels.set('i', true)
+  vowels.set('o', true)
+  vowels.set('u', true)
+
+  answer.toLowerCase() // convert to lowercase
+
+  if (vowels.has(answer)) console.log(`${answer} is a vowel`)
+  else console.log(`${answer} is a consonant`)
+
+  rl.close()
+})
