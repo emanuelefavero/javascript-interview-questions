@@ -8,6 +8,7 @@ console.log(str[0]) // 'h'
 console.log(str.charAt(0)) // 'h'
 
 // ------------------------------------------------------------
+
 // we can use single and double quotes interchangeably
 console.log('hello') // 'hello'
 console.log("hello") // 'hello' 
@@ -65,3 +66,16 @@ console.log('\u0040') // @
 
 // \u{XXXXX}
 console.log('\u{1f602}') // 😂
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: Explain various ways to declare a string variable
+// A: let str = 'hello'
+//    let str = "hello"
+//    let str = `hello`
+
+// Q: How would you deal with unicode characters?
+// A: With the \uXXXX syntax (escape unicode characters) and the \u{XXXXX} syntax for longer unicode characters such as emojis
+
+
