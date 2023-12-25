@@ -19,3 +19,17 @@ console.log(str.slice(-4)) // 'word'
 console.log(str.substring(0, 5)) // 'hello'
 
 // NOTE: substr() is deprecated, use slice() instead
+
+// ------------------------------------------------------------
+// There are 2 character extraction methods in JavaScript: charAt() and charCodeAt()
+
+// * charAt()
+// charAt() returns the character at a specified index in a string
+console.log(str.charAt(0)) // 'h'
+
+// * charCodeAt()
+// charCodeAt() returns the unicode of the character at a specified index in a string
+console.log(str.charCodeAt(0)) // 104
+// Explanation: 104 is the unicode for 'h'
+
+// ------------------------------------------------------------
