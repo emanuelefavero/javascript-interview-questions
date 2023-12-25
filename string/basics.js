@@ -37,6 +37,17 @@ console.log('I\'m John') // I'm John
 let myName = 'John'
 console.log(`My name is ${myName}`) // 'My name is John'
 
+// we can also use expressions
+console.log(`My name is ${myName.toUpperCase()}`) // 'My name is JOHN'
+
+// we can also use multiline strings to avoid escaping new lines
+console.log(`hello
+  world`)
+/*
+hello
+  world
+*/
+
 // ------------------------------------------------------------
 // ESCAPE CHARACTERS
 
@@ -77,5 +88,3 @@ console.log('\u{1f602}') // 😂
 
 // Q: How would you deal with unicode characters?
 // A: With the \uXXXX syntax (escape unicode characters) and the \u{XXXXX} syntax for longer unicode characters such as emojis
-
-
