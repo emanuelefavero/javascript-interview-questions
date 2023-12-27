@@ -39,9 +39,11 @@ let christmas = new Date(2024, 11, 25)
 console.log(christmas.getTime())
 
 // * get the difference between today and christmas in days
-let diff = christmas.getTime() - today.getTime()
-let diffDays = Math.floor(diff / (1000 * 3600 * 24))
-console.log(diffDays)
+let diff = christmas - today
+let diffDays = Math.floor(diff / (24 * 60 * 60 * 1000))
+console.log(diffDays) // 363
+
+// ? 24 hours in a day, 60 minutes in an hour, 60 seconds in a minute, 1000 milliseconds in a second
 
 // ----------------------------------------------------------
 
