@@ -1,4 +1,5 @@
 let date = new Date()
+
 console.log(date) // 2023-12-27T09:12:59.648Z - date in UTC time
 console.log(date.toLocaleString()) // 12/27/2023, 10:24:20 AM - date in local time
 console.log(date.toLocaleDateString()) // 12/27/2023 - date in local time
