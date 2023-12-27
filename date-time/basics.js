@@ -48,7 +48,7 @@ console.log(diffDays)
 /**
  * * getMonthName - return the name of the month
  *
- * @param {number} month - month number
+ * @param {number} month - month number (0-11)
  * @returns {string} - month name
  */
 
@@ -72,6 +72,31 @@ function getMonthName(month) {
 }
 
 console.log(getMonthName(date1.getMonth()))
+
+// ----------------------------------------------------------
+
+/**
+ * * getDayName - return the name of the week day
+ *
+ * @param {number} day - day number (0-6)
+ * @returns {string} - day name (Sunday, Monday, etc.)
+ */
+
+function getDayName(day) {
+  const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ]
+
+  return days[day]
+}
+
+console.log(getDayName(date1.getDay())) // Wednesday
 
 // ----------------------------------------------------------
 // QUESTIONS
