@@ -25,3 +25,14 @@ let { username: name, age: userAge } = getUser() // TIP: you can rename the vari
 
 console.log(name) // John
 console.log(userAge) // 32
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: Explain a common scenario for object destructuring
+// A: When you need to extract values from an object and store them in variables. For instance from s JSON file in a front end application that gets data with a back end API
+
+// Q: Explain the output of this code:
+let { a = 10, b } = {}
+console.log(a, b) // 10, undefined
+// A: If the value is undefined, the default value will be used, so a will be 10 and b will be undefined
