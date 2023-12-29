@@ -40,3 +40,26 @@ function test4(b) {
 
 let add = test4.bind(obj) // create a new function with obj as this value
 add(4) // 6, call test4() with obj as this value and 4 as argument
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: What is the difference between call(), apply() and bind()?
+// A: call() and apply() are used to call a function with a given this value and arguments provided individually or as an array
+// bind() is similar, but it returns a new function instead of calling the function immediately
+
+// Q: What will be the output of the following code?
+
+/*
+let obj2 = {
+  a: 4,
+}
+
+function test5() {
+  this = obj2 // ! ERROR
+}
+
+test5() // TypeError: Invalid left-hand side in assignment
+*/
+
+// A: Error, since you can't assign a value to this
