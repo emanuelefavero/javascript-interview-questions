@@ -47,3 +47,15 @@ console.log(user2.name) // JOHN, still the same
 
 // ? Why is the name still the same?
 // Because we didn't define a setter so the name can't be changed
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: What are getter and setters?
+// A: Getters and setters are special methods used to define object accessors. Accessors are properties that execute a function when they are accessed (getter) or modified (setter).
+
+// Q: What is the difference between a getter and a method?
+// A: A getter is a special method that is executed automatically when a property is read. A method is a function that can be executed manually.
+
+// Q: Explain a real world use case for getters and setters
+// A: Getters and setters are useful when you want to execute some code when a property is accessed or modified. For example, you can use a getter to convert a property to uppercase when it is read.
