@@ -38,3 +38,15 @@ mySet.clear()
 // You can also create a Set from an array
 const setFromArray = new Set(['apple', 'banana', 'orange', 'apple'])
 console.log(setFromArray) // Set(3) {"apple", "banana", "orange"}
+
+// ---------------------------------------------------------------
+// QUESTIONS
+
+// Q: What is the difference between map and set?
+// A: Map is an ordered collection of key-value pairs. Set is an unordered collection of unique elements
+
+// Q: How can you remove specific values from set?
+// A: Using the delete() method
+
+// Q: What will the entries() method return with set?
+// A: Only the values, since set does not have keys
