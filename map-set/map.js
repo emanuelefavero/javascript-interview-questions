@@ -51,3 +51,29 @@ for (let [key, value] of product.entries()) {
 }
 
 // ---------------------------------------------------------------
+// Convert map to array
+
+// 1. Using spread operator
+console.log([...product])
+// [["name", "iPhone"], [1, "Apple"], [true, "Available"]]
+
+// 2. Using Array.from method
+console.log(Array.from(product))
+
+// ---------------------------------------------------------------
+// Convert object to map
+let obj = {
+  name: 'iPhone',
+  price: 1000,
+  available: true,
+}
+
+let map = new Map(Object.entries(obj))
+console.log(map)
+// Map(3) {"name" => "iPhone", "price" => 1000, "available" => true}
+
+// ---------------------------------------------------------------
+// Convert map to object
+
+let obj2 = Object.fromEntries(product)
+console.log(obj) // {name: "iPhone", price: 1000, available: true}
