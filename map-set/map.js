@@ -21,3 +21,33 @@ console.log(product.get(true)) // Available
 
 // Map has the size property, objects don't. The size property returns the number of key-value pairs in the map
 console.log(product.size) // 3
+
+// ---------------------------------------------------------------
+// Map is iterable
+
+// 1. Using for-of loop
+for (let [key, value] of product) {
+  console.log(key, value) // name iPhone, 1 Apple, true Available
+}
+
+// 2. Using forEach method
+product.forEach((value, key) => {
+  console.log(key, value) // name iPhone, 1 Apple, true Available
+})
+
+// 3. Using keys method
+for (let key of product.keys()) {
+  console.log(key) // name, 1, true
+}
+
+// 4. Using values method
+for (let value of product.values()) {
+  console.log(value) // iPhone, Apple, Available
+}
+
+// 5. Using entries method
+for (let [key, value] of product.entries()) {
+  console.log(key, value) // name iPhone, 1 Apple, true Available
+}
+
+// ---------------------------------------------------------------
