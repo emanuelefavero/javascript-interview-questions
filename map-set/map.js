@@ -95,3 +95,26 @@ console.log(product.has('name')) // false
 product.clear()
 console.log(product.size) // 0
 console.log(product) // Map(0) {}
+
+// ---------------------------------------------------------------
+// QUESTIONS
+
+// Q: What are the advantages of using Map over object?
+// A: Maps can have keys of any type, objects can only have string keys. Maps are iterable, objects are not. Maps have size property, objects don't. Map is more optimized for frequent addition and removal of key-value pairs
+
+// Q: How can you iterate over a map?
+// A: Using for-of loop, forEach method, keys method, values method, entries method
+
+// A: Can you assign key/values pair to a map with this syntax? product['name'] = 'iPhone'
+// A: Yes, but it's not recommended. It's better to use the set method since keys will be converted to strings this way
+
+// Q: How can you convert an object to a map?
+let newMap = new Map(Object.entries(obj))
+// A: Using Object.entries method
+
+// Q: How can you convert a map to an object?
+let newObj = Object.fromEntries(product)
+// A: Using Object.fromEntries method
+
+// Q: How can you remove an item or all items from a map?
+// A: using the delete() and clear() methods
