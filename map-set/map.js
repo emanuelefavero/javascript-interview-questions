@@ -77,3 +77,21 @@ console.log(map)
 
 let obj2 = Object.fromEntries(product)
 console.log(obj) // {name: "iPhone", price: 1000, available: true}
+
+// ---------------------------------------------------------------
+// has() method - Check if a key exists in the map
+
+console.log(product.has('name')) // true
+
+// ---------------------------------------------------------------
+// delete() method - Delete a key-value pair from the map
+
+product.delete('name')
+console.log(product.has('name')) // false
+
+// ---------------------------------------------------------------
+// clear() method - Delete all key-value pairs from the map
+
+product.clear()
+console.log(product.size) // 0
+console.log(product) // Map(0) {}
