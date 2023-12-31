@@ -23,7 +23,7 @@ console.log(product.get(true)) // Available
 console.log(product.size) // 3
 
 // ---------------------------------------------------------------
-// Map is iterable
+// * Map is iterable
 
 // 1. Using for-of loop
 for (let [key, value] of product) {
@@ -51,7 +51,7 @@ for (let [key, value] of product.entries()) {
 }
 
 // ---------------------------------------------------------------
-// Convert map to array
+// * Convert map to array
 
 // 1. Using spread operator
 console.log([...product])
@@ -73,7 +73,7 @@ console.log(map)
 // Map(3) {"name" => "iPhone", "price" => 1000, "available" => true}
 
 // ---------------------------------------------------------------
-// Convert map to object
+// * Convert map to object
 
 let obj2 = Object.fromEntries(product)
 console.log(obj) // {name: "iPhone", price: 1000, available: true}
