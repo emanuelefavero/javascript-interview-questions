@@ -23,3 +23,12 @@ let weakSet = new WeakSet()
 let obj2 = {}
 weakSet.add(obj2)
 console.log(weakSet.has(obj2)) // true
+
+// ---------------------------------------------------------------
+// QUESTIONS
+
+// Q: Explain the difference between Map and WeakMap
+// A: Map holds the keys and values strongly. WeakMap holds the keys and values weakly so that they can be garbage collected when there are no references to them. Also WeakMap can't be iterated
+
+// Q: Explain the difference between Set and WeakSet
+// A: WeakSet are similar to WeakMap
