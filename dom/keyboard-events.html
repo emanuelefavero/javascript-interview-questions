@@ -24,6 +24,18 @@
       function handleKeyUp(e) {
         output.innerHTML = `Key Up: ${e.code}`
       }
+
+      // ------------------------------
+      // QUESTIONS
+
+      // Q: how can you check if ctrl and Z is pressed at the same time?
+      // A: if (e.ctrlKey && e.code === 'KeyZ')
+
+      // Q: What does event.code return?
+      // A: The code of the key that is pressed. For example, if you press the 'a' key, it will return 'KeyA'
+
+      // Q: Explain the difference between event.code and event.key
+      // A: event.key returns the value of the key that is pressed. For example, if you press the 'a' key, it will return 'a'. event.code returns the code of the key that is pressed. For example, if you press the 'a' key, it will return 'KeyA'
     </script>
   </body>
 </html>
