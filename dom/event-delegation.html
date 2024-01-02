@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <table onclick="mainClick()">
+      <tr>
+        <th>Code</th>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Product 1</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Product 2</td>
+        <td>200</td>
+      </tr>
+    </table>
+
+    <script>
+      function mainClick() {
+        console.log(event.target)
+        console.log(event.target.tagName)
+        console.log(event.target.textContent)
+
+        // TIP: If you need to display the value of input elements you can use event.target.value
+      }
+    </script>
+  </body>
+</html>
