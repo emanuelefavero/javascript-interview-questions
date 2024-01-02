@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="output">Hello</h1>
+
+    <!-- TIP: onblur gets fired when the element loses focus -->
+    <input
+      placeholder="focus me"
+      type="text"
+      onfocus="eventHandler('On Focus')"
+      onblur="eventHandler('On Blur')"
+    />
+
+    <!-- TIP: onchange gets fired when the element loses focus and there are any changes in the value -->
+    <!-- TIP: You can also use this.options[this.selectedIndex].text to get the text of the option instead of the value -->
+    <select onchange="handleChange(event)">
+      <option value="iPhone">iPhone</option>
+      <option value="iPad">iPad</option>
+      <option value="Airpods">Airpods</option>
+    </select>
+
+    <input
+      type="checkbox"
+      onchange="handleChange(event); handleChecked(event)"
+      value="my checkbox"
+      id="myCheckbox"
+    />
+    <label for="myCheckbox">My Checkbox</label>
+
+    <!-- TIP: oninput is similar to onchange but it reacts immediately instead of when the element loses focus. It also gets all the input (even voice input, while the onkeyup only get keyboard values) -->
+    <input
+      placeholder="write here"
+      type="text"
+      oninput="handleInput(this.value)"
+    />
+
+    <script>
+      function eventHandler(msg) {
+        document.getElementById('output').innerHTML = msg
+      }
+
+      function handleChange(e) {
+        document.getElementById('output').innerHTML = e.target.value
+
+        if (e.target.value === 'iPhone') {
+          document.body.style.backgroundColor = 'lightcoral'
+        } else if (e.target.value === 'iPad') {
+          document.body.style.backgroundColor = 'lightblue'
+        } else if (e.target.value === 'Airpods') {
+          document.body.style.backgroundColor = 'lightgreen'
+        }
+      }
+
+      function handleChecked(e) {
+        if (e.target.checked) {
+          document.body.style.backgroundColor = 'lavender'
+        } else {
+          document.body.style.backgroundColor = 'beige'
+        }
+
+        // TIP: You could also use this.checked instead of e.target.checked
+      }
+
+      function handleInput(value) {
+        document.getElementById('output').innerHTML = value
+      }
+    </script>
+  </body>
+</html>
