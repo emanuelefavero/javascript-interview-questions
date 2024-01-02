@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Timer</h1>
+
+    <div id="output"></div>
+
+    <button id="startTimer">Start Timer</button>
+    <button id="stopTimer">Stop Timer</button>
+
+    <script>
+      const output = document.getElementById('output')
+      const startTimer = document.getElementById('startTimer')
+      const stopTimer = document.getElementById('stopTimer')
+
+      let timer = null
+
+      startTimer.addEventListener('click', () => {
+        timer = setInterval(() => {
+          const date = new Date()
+          const hours = date.getHours()
+          const minutes = date.getMinutes()
+          const seconds = date.getSeconds()
+
+          output.innerHTML = `${hours}:${minutes}:${seconds}`
+        }, 1000)
+      })
+
+      stopTimer.addEventListener('click', () => {
+        clearInterval(timer)
+      })
+    </script>
+  </body>
+</html>
