@@ -42,6 +42,21 @@
       button2.addEventListener('click', (e) => {
         alert(e.target.name) // button2
       })
+
+      // ------------------------------
+      // QUESTIONS
+
+      // Q: Which is the default event propagation?
+      // A: The default event propagation is "bottom up" that is why it is called "event bubbling".
+
+      // Q: How can you stop event propagation?
+      // A: You can stop event propagation by calling event.stopPropagation() inside the event listener.
+
+      // Q: How can you change the default propagation path from "bottom up" to "top down"?
+      // A: You can change the default propagation path from "bottom up" to "top down" by passing true as the third argument to the addEventListener method.
+
+      // Q: How can you get the reference of the element from which the event is fired?
+      // A: event.target
     </script>
   </body>
 </html>
