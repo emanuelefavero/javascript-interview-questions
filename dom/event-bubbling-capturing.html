@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- EVENT PROPAGATION: The click will fire the event "bottom up" that is why it is called "event bubbling" -->
+    <div>
+      <button>Click Me</button>
+    </div>
+
+    <button name="button2">Click Me 2</button>
+
+    <script>
+      let div = document.querySelector('div')
+      let button = document.querySelector('button')
+      let button2 = document.querySelector('[name="button2"]')
+
+      button.addEventListener(
+        'click',
+        () => {
+          // TIP: uncomment the line below to stop propagation
+          // event.stopPropagation() // stop the event from bubbling up
+
+          alert('Hello')
+        }
+        // TIP: uncomment the line below to make the event listener run in the capturing phase (from top to bottom)
+        // true
+      )
+
+      div.addEventListener(
+        'click',
+        () => {
+          alert('World')
+        }
+        // TIP: uncomment the line below to make the event listener run in the capturing phase (from top to bottom)
+        // true
+      )
+
+      button2.addEventListener('click', (e) => {
+        alert(e.target.name) // button2
+      })
+    </script>
+  </body>
+</html>
