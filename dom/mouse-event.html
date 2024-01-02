@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: inline-block;
+        padding: 1rem;
+        background-color: maroon;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TIP: Try out events on these divs (see html code)</h1>
+    <div
+      id="div1"
+      onclick='eventHandler("Click")'
+      oncontextmenu='eventHandler("Right Click")'
+      ondblclick='eventHandler("Double Click")'
+    >
+      Div 1
+    </div>
+
+    <div
+      id="div2"
+      onmousedown='eventHandler2("Mouse Down")'
+      onmouseup='eventHandler2("Mouse Up")'
+      onmouseout='eventHandler2("Mouse Out")'
+      onmouseover='eventHandler2("Mouse Over")'
+    >
+      Div 2
+    </div>
+
+    <div id="div3" onmouseup="eventHandler3()">Div 2</div>
+
+    <script>
+      function eventHandler(msg) {
+        document.getElementById('div1').innerHTML = msg
+      }
+
+      function eventHandler2(msg) {
+        document.getElementById('div2').innerHTML = msg
+      }
+
+      function eventHandler3() {
+        let msg = ''
+
+        // TIP: The event.button property is useful for detecting if the user has pressed the left, middle or right mouse button
+        if (event.button === 0) {
+          msg = 'Left Click'
+        } else if (event.button === 1) {
+          msg = 'Middle Click'
+        } else if (event.button === 2) {
+          msg = 'Right Click'
+        }
+
+        // You can also check if the user has pressed the alt, ctrl, shift or meta key (command key on mac)
+        if (event.altKey) {
+          msg += ' + Alt Key'
+        } else if (event.ctrlKey) {
+          msg += ' + Ctrl Key'
+        } else if (event.shiftKey) {
+          msg += ' + Shift Key'
+        } else if (event.metaKey) {
+          msg += ' + Command Key'
+        }
+
+        // TIP: You can use (event.ctrlKey || event.metaKey) to check if the user has pressed the ctrl (Windows) or command key (Mac)
+
+        document.getElementById('div3').innerHTML = msg
+      }
+    </script>
+  </body>
+</html>
