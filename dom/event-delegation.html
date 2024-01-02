@@ -11,6 +11,7 @@
     </style>
   </head>
   <body>
+    <!-- TIP: Thanks to event delegation we only need to add an event listener to the parent and every time a table data is clicked the event will be fired -->
     <table onclick="mainClick()">
       <tr>
         <th>Code</th>
@@ -33,10 +34,22 @@
       function mainClick() {
         console.log(event.target)
         console.log(event.target.tagName)
-        console.log(event.target.textContent)
+        console.log(event.target.textContent) // you can also use .innerHTML
 
         // TIP: If you need to display the value of input elements you can use event.target.value
       }
+
+      // ------------------------------
+      // QUESTIONS
+
+      // Q: How event bubbling or capturing is useful in practical scenarios?
+      // A: Event bubbling or capturing is useful when you need to add an event listener to multiple elements. For example, if you have a table with 100 rows and you need to add an event listener to each row, you can add the event listener to the table and every time a row is clicked the event will be fired.
+
+      // Q: Which property can be used to check the element type on which the element is triggered?
+      // A: event.target.tagName
+
+      // Q: How can you get the value of the element on which the event is triggered?
+      // A: event.target.value or event.target.innerHTML or textContent
     </script>
   </body>
 </html>
