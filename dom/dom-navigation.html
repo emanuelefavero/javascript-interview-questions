@@ -51,7 +51,35 @@
         console.log(div1.previousElementSibling) // null, since there is no previous sibling
         console.log(div1.parentNode) // body
         console.log(div1.parentElement) // body
+        console.log(div1.hasChildNodes()) // true, returns true if the element has children
       }
+
+      // ------------------------------
+      // QUESTIONS
+
+      // Q: What is a node in a DOM tree?
+      // A: A node is an element in a DOM tree. There are different types of nodes such as element nodes, text nodes, comment nodes, etc.
+
+      /*
+      Node Types:
+
+      Constant            Value  Description
+      ELEMENT_NODE        1      An Element node like <p> or <div>
+      ATTRIBUTE_NODE      2      An Attribute of an Element
+      TEXT_NODE           3      The actual Text inside an Element or Attr
+      COMMENT_NODE        8      An HTML Comment node
+      DOCUMENT_NODE       9      A Document node. Like the parent of <html>
+      DOCUMENT_TYPE_NODE  10     A Document Type node. Like <!DOCTYPE html>
+      */
+
+      // Q: How can we access the next element at the same level?
+      // A: .nextElementSibling
+
+      // Q: What is the difference between .childNodes and .children?
+      // A: childNodes also returns text nodes in the HTML, while children only returns elements. The children property is better to use if you only want to access the elements.
+
+      // Q: How can you check if an element has children?
+      // A: By using .children.length > 0 or .hasChildNodes()
     </script>
   </body>
 </html>
