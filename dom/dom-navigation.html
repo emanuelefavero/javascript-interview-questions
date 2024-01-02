@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      console.log(document.body) // null, since the script is executed before the body is loaded
+    </script>
+  </head>
+  <body>
+    <div id="div1">
+      <h2>Div 1</h2>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Div 2</h2>
+      <input type="text" />
+      <button onclick="btnClick()">Click Me</button>
+    </div>
+
+    <script>
+      const div1 = document.getElementById('div1')
+      const ul = document.querySelector('ul')
+
+      function btnClick() {
+        console.log(document.documentElement) // html element
+        console.log(document.head) // head element
+        console.log(document.body) // body element
+
+        console.log(document.body.childNodes) // [text, div#div1, text, div, text, script, text, comment, text, script, text]
+        console.log(document.body.childNodes.length) // 11
+
+        // TIP: To only get the elements:
+        console.log(document.body.children) // [div#div1, div]
+
+        // navigate through child nodes
+        for (let i = 0; i < ul.children.length; i++) {
+          console.log(ul.children[i].textContent) // Item 1, Item 2
+        }
+
+        console.log(ul.firstElementChild.textContent) // Item 1
+        console.log(ul.lastElementChild.textContent) // Item 2
+        console.log(ul.nodeName) // UL
+        console.log(ul.nodeType) // 1
+        console.log(div1.nextElementSibling) // div 2
+        console.log(div1.previousElementSibling) // null, since there is no previous sibling
+        console.log(div1.parentNode) // body
+        console.log(div1.parentElement) // body
+      }
+    </script>
+  </body>
+</html>
