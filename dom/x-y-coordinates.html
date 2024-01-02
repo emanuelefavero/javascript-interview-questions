@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        display: inline-block;
+        padding: 1rem;
+        background-color: blueviolet;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 1rem;
+      }
+
+      #main {
+        height: 500px;
+        width: 300px;
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body onmousemove="eventHandler()">
+    <div id="div1">X Y Display</div>
+    <br />
+    <div id="main"></div>
+
+    <script>
+      function eventHandler() {
+        let msg = ''
+
+        // TIP: clientX and clientY are relative to the viewport (current window)
+        msg = 'client-X:' + event.clientX + ',Y:' + event.clientY
+        msg = msg + '<br />'
+
+        // TIP: pageX and pageY are relative to the document/page. If the page is scrolled, the values will change
+        msg = msg + 'page-X:' + event.pageX + ',Y:' + event.pageY
+        msg = msg + '<br />'
+
+        // TIP: screenX and screenY are relative to the screen
+        msg = msg + 'screen-X:' + event.screenX + ',Y:' + event.screenY
+
+        document.getElementById('div1').innerHTML = msg
+      }
+    </script>
+  </body>
+</html>
