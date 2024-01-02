@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onkeydown="handleKeyDown(event)" onkeyup="handleKeyUp(event)">
+    <!-- <input
+      type="text"
+      onkeydown="handleKeyDown(event)"
+      onkeyup="handleKeyUp(event)"
+    /> -->
+    <p>Click any key</p>
+    <h1 id="output">Hello</h1>
+
+    <script>
+      const output = document.getElementById('output')
+
+      function handleKeyDown(e) {
+        output.innerHTML = `Key Down: ${e.key}`
+      }
+
+      function handleKeyUp(e) {
+        output.innerHTML = `Key Up: ${e.code}`
+      }
+    </script>
+  </body>
+</html>
