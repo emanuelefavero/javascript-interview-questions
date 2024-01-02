@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+
+    <script>
+      console.log(window) // window is the global object
+
+      // document is a property of the window object
+      console.log(window.document)
+
+      // you don't need to use window.document
+      console.log(document)
+
+      // document is an object
+      console.log(typeof document)
+
+      // setInterval and setTimeout are methods of the window object
+      console.log(window.setInterval)
+
+      // you don't need to use window.setInterval
+      console.log(setInterval)
+
+      // .innerWidth and .innerHeight are properties of the window object
+      console.log(innerWidth)
+      console.log(innerHeight)
+
+      // .location
+      console.log(location.href) // current url
+      console.log(location.protocol) // http or https
+      console.log(location.host) // domain name
+      console.log(location.origin) // protocol + host
+      console.log(location.pathname) // path
+      console.log(location.search) // query string
+
+      // TIP: The BOM is the Browser Object Model and it's a collection of objects that represent the browser such as Screen, Location, History, Navigator, etc.
+      console.log(screen.width) // screen width in pixels
+      console.log(screen.height) // screen height in pixels
+      console.log(screen.availWidth) // screen width in pixels minus interface features like the taskbar
+      console.log(screen) // screen object
+    </script>
+  </body>
+</html>
