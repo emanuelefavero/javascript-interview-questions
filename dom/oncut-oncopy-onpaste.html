@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="output">Hello</h1>
+
+    <!-- Add cut, copy, paste events (these work when user clicks ctrl+c, ctrl+x, ctrl+v) -->
+    <input
+      placeholder="try ctrl+c, ctrl+x, ctrl+v"
+      type="text"
+      oncut='handleEvent("On Cut")'
+      oncopy='handleEvent("On Copy")'
+      onpaste='handleEvent("On Paste")'
+    />
+
+    <!-- Prevent these events from firing -->
+    <!-- TIP: You can also prevent these events from firing by returning false instead of e.preventDefault() -->
+    <input
+      placeholder="try ctrl+c, ctrl+x, ctrl+v"
+      type="text"
+      oncut="e.preventDefault()"
+      oncopy="e.preventDefault()"
+      onpaste="e.preventDefault()"
+    />
+
+    <script>
+      function handleEvent(msg) {
+        document.getElementById('output').innerHTML = msg
+      }
+
+      // ------------------------------
+      // QUESTIONS
+
+      // Q: Explain about cut, copy, paste events
+      // A: These events get fired when the user clicks ctrl+c, ctrl+x, ctrl+v. These events are: oncut, oncopy, onpaste
+
+      // Q: How can you stop these events from firing?
+      // A: You can stop these events from firing by calling e.preventDefault() inside the event listener or return false
+    </script>
+  </body>
+</html>
