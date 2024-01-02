@@ -69,6 +69,23 @@
       function handleInput(value) {
         document.getElementById('output').innerHTML = value
       }
+
+      // ------------------------------
+      // QUESTIONS
+
+      // Q: What is the difference between onblur and onchange?
+      // A: onblur gets fired when the element loses focus. onchange gets fired when the element loses focus and there are any changes in the value.
+
+      // Q: How can you handle events on checkboxes and radio buttons?
+      // A: You can use onchange event listener
+
+      // Q: What is the difference between onkeyup and oninput?
+      // A: onkeyup only get keyboard values while oninput gets all the input (even voice input or pasted text)
+
+      // Q: How can you get the text (not the value) of a select option?
+      // A: You can use this.options[this.selectedIndex].text
+
+      // TIP: this.options returns an array of all the options and this.selectedIndex returns the index of the selected option
     </script>
   </body>
 </html>
