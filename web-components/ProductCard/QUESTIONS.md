@@ -102,3 +102,7 @@ attributeChangedCallback(name, oldValue, newValue) {
   }
 }
 ```
+
+## Explain the purpose of `disconnectedCallback` method
+
+The `disconnectedCallback` method is called when the component is removed from the DOM
