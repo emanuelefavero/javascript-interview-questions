@@ -76,3 +76,29 @@ body.appendChild(template.content.cloneNode(true)) // the template must be clone
 const template = document.createElement('template')
 template.innerHTML = `<h1>My template</h1>`
 ```
+
+## What is the `observedAttributes` method?
+
+The `observedAttributes` method is used to specify the attributes that you want to observe for changes. When an attribute is changed, the `attributeChangedCallback` method is called
+
+```js
+static get observedAttributes() {
+  return ['name', 'price']
+}
+```
+
+## When will the `attributeChangedCallback` method be called?
+
+The `attributeChangedCallback` method is called when an attribute is added, removed, updated or replaced
+
+## How can you improve rendering with the `attributeChangedCallback` method?
+
+By checking if the attribute has changed before updating the DOM
+
+```js
+attributeChangedCallback(name, oldValue, newValue) {
+  if (newValue !== oldValue) {
+    this.shadowRoot.querySelector('h1').innerText = newValue
+  }
+}
+```
