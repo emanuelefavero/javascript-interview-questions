@@ -106,6 +106,7 @@ class ProductCard extends HTMLElement {
   // Add event listener
   connectedCallback() {
     this.shadowRoot.querySelector('.buy-button').onclick = () => {
+      this.status = 'Sold' // Update status attribute
       this.setAttribute('status', 'Sold') // Update status attribute
     }
 
@@ -114,6 +115,16 @@ class ProductCard extends HTMLElement {
       .addEventListener('click', () => {
         this.remove() // remove this element
       })
+  }
+
+  /**
+   * @param {string} value
+   */
+
+  // ? Updating the status with the setter is a more efficient way
+  set status(value) {
+    this.setAttribute('status', value)
+    // value = 'Sold', @see connectedCallback()
   }
 
   // ? This method is needed to keep track of the attribute changes
