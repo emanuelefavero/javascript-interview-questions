@@ -50,6 +50,20 @@ template.innerHTML = `
         scale: 0.98;
       }
     }
+
+    button.delete-button {
+      background-color: #e11d48;
+      border: 1px solid #f43f5e;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #f43f5e;
+      }
+
+      &:active {
+        background-color: #be123c;
+      }
+    }
   }
 </style>
 
@@ -62,6 +76,9 @@ template.innerHTML = `
     </h3>
     <p></p>
     <button class='buy-button'>Buy</button>
+    <button class='delete-button'>
+      X
+    </button>
   </div>
 </div>
 `
@@ -91,6 +108,12 @@ class ProductCard extends HTMLElement {
     this.shadowRoot.querySelector('.buy-button').onclick = () => {
       this.setAttribute('status', 'Sold') // Update status attribute
     }
+
+    this.shadowRoot
+      .querySelector('.delete-button')
+      .addEventListener('click', () => {
+        this.remove() // remove this element
+      })
   }
 
   // ? This method is needed to keep track of the attribute changes
@@ -101,6 +124,11 @@ class ProductCard extends HTMLElement {
   // Update displayed data after attribute change
   attributeChangedCallback(attributeName, oldValue, newValue) {
     this.shadowRoot.querySelector('p').innerText = newValue
+  }
+
+  // ? This method will be called when the element is removed from the DOM
+  disconnectedCallback() {
+    this.shadowRoot.querySelector('.delete-button').removeEventListener()
   }
 }
 
