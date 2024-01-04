@@ -61,7 +61,7 @@ template.innerHTML = `
       <span class='price'></span>
     </h3>
     <p></p>
-    <button class='btn'>Buy</button>
+    <button class='buy-button'>Buy</button>
   </div>
 </div>
 `
@@ -78,13 +78,29 @@ class ProductCard extends HTMLElement {
 
     // Add dynamic data
     this.shadowRoot.querySelector('.product-name').innerText =
-      this.getAttribute('productName')
+      this.getAttribute('pname')
     this.shadowRoot.querySelector('.price').innerText =
       this.getAttribute('price')
     this.shadowRoot.querySelector('img').src = this.getAttribute('image')
-    this.shadowRoot.querySelector('img').alt = this.getAttribute('productName')
-    this.shadowRoot.querySelector('p').innerText =
-      this.getAttribute('productStatus')
+    this.shadowRoot.querySelector('img').alt = this.getAttribute('pname')
+    this.shadowRoot.querySelector('p').innerText = this.getAttribute('status')
+  }
+
+  // Add event listener
+  connectedCallback() {
+    this.shadowRoot.querySelector('.buy-button').onclick = () => {
+      this.setAttribute('status', 'Sold') // Update status attribute
+    }
+  }
+
+  // ? This method is needed to keep track of the attribute changes
+  static get observedAttributes() {
+    return ['status'] // List of attributes to keep track of
+  }
+
+  // Update displayed data after attribute change
+  attributeChangedCallback(attributeName, oldValue, newValue) {
+    this.shadowRoot.querySelector('p').innerText = newValue
   }
 }
 
