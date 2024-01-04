@@ -18,22 +18,23 @@ js:
 
 ```js
 // ./productCard.js
-class ProductCard extends HTMLElement {
-  constructor() {
-    super()
-    const h1 = document.createElement('h1')
-    h1.innerHTML = `<style>
+const template = document.createElement('template')
+template.innerHTML = `<style>
       h1 {
         color: red;
       }
     </style>
-    Product Component`
+    <h1>Product Component</h1>`
+
+class ProductCard extends HTMLElement {
+  constructor() {
+    super()
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(h1)
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
   }
 }
 
-customElements.define('my-component', MyComponent)
+customElements.define('product-card', ProductCard)
 ```
 
 ## What is the Shadow DOM? Explain the need for it in Web Components
@@ -67,4 +68,11 @@ Then, use the `content` property to get the template content
 ```js
 const template = document.querySelector('#myTemplate')
 body.appendChild(template.content.cloneNode(true)) // the template must be cloned before it can be used
+```
+
+> TIP: You can also create a template element in the JS file
+
+```js
+const template = document.createElement('template')
+template.innerHTML = `<h1>My template</h1>`
 ```

@@ -1,15 +1,16 @@
-class ProductCard extends HTMLElement {
-  constructor() {
-    super()
-    const h1 = document.createElement('h1')
-    h1.innerHTML = `<style>
+const template = document.createElement('template')
+template.innerHTML = `<style>
       h1 {
         color: red;
       }
     </style>
-    Product Component`
+    <h1>Product Component</h1>`
+
+class ProductCard extends HTMLElement {
+  constructor() {
+    super()
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(h1)
+    this.shadowRoot.appendChild(template.content.cloneNode(true))
   }
 }
 
