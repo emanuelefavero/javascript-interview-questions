@@ -72,7 +72,7 @@ template.innerHTML = `
   <div class="container">
     <h3>
       <!-- pass html inside the component with slot tag -->
-      <slot name='title'></slot>
+      <slot name='pname'></slot>
       <span class='price'></span>
     </h3>
     <p></p>
@@ -98,7 +98,7 @@ class ProductCard extends HTMLElement {
     this.shadowRoot.querySelector('.price').innerText =
       this.getAttribute('price')
     this.shadowRoot.querySelector('img').src = this.getAttribute('image')
-    this.shadowRoot.querySelector('img').alt = this.getAttribute('pname')
+    this.shadowRoot.querySelector('img').alt = this.getAttribute('alt')
     this.shadowRoot.querySelector('p').innerText = this.getAttribute('status')
   }
 

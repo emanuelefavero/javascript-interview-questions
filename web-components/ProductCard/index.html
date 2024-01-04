@@ -41,42 +41,42 @@
   </head>
   <body>
     <header>
-      <h1>Header Section</h1>
+      <h1>Fruits</h1>
     </header>
 
     <main>
       <product-card
-        pname="Apple"
         price="$1.00"
         image="./images/apple.png"
+        alt="Apple"
         status="Not Sold"
       >
         <!-- We can pass html elements inside the component with slot -->
-        <span slot="title">Apple</span>
+        <span slot="pname">Apple</span>
       </product-card>
       <product-card
-        pname="Orange"
         price="$0.40"
         image="./images/orange.png"
+        alt="Orange"
         status="Not Sold"
       >
-        <span slot="title">Orange</span>
+        <span slot="pname">Orange</span>
       </product-card>
       <product-card
-        pname="Grape"
         price="$1.50"
         image="./images/grape.png"
+        alt="Grape"
         status="Not Sold"
       >
-        <span slot="title">Grape</span>
+        <span slot="pname">Grape</span>
       </product-card>
       <product-card
-        pname="Banana"
         price="$0.50"
         image="./images/banana.png"
+        alt="Banana"
         status="Not Sold"
       >
-        <span slot="title">Banana</span>
+        <span slot="pname">Banana</span>
       </product-card>
     </main>
 
