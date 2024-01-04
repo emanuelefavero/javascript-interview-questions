@@ -1,7 +1,15 @@
 class ProductCard extends HTMLElement {
   constructor() {
     super()
-    this.innerHTML = `<h2>Product Component</h2>`
+    const h1 = document.createElement('h1')
+    h1.innerHTML = `<style>
+      h1 {
+        color: red;
+      }
+    </style>
+    Product Component`
+    this.attachShadow({ mode: 'open' })
+    this.shadowRoot.appendChild(h1)
   }
 }
 
