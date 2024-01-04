@@ -47,3 +47,24 @@ You can add a component to the Shadow DOM by using the `attachShadow` method
 ```js
 this.attackShadow({ mode: 'open' }) // open means that you can access the shadow DOM from outside the component
 ```
+
+## WHat is the purpose of the `<template>` html tag?
+
+The `<template>` tag is used to declare fragments of HTML that can be cloned and inserted in the document by script
+
+## How to add a template?
+
+First, create a template element in the HTML document
+
+```html
+<template id="myTemplate">
+  <h1>My template</h1>
+</template>
+```
+
+Then, use the `content` property to get the template content
+
+```js
+const template = document.querySelector('#myTemplate')
+body.appendChild(template.content.cloneNode(true)) // the template must be cloned before it can be used
+```
