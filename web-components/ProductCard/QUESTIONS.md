@@ -106,3 +106,25 @@ attributeChangedCallback(name, oldValue, newValue) {
 ## Explain the purpose of `disconnectedCallback` method
 
 The `disconnectedCallback` method is called when the component is removed from the DOM
+
+## What is Light DOM?
+
+The Light DOM is the actual html DOM, not the Shadow DOM
+
+## How can you pass html content to a component?
+
+By using the `<slot>` tag
+
+```html
+<my-component>
+  <h1 slot="title">My Title</h1>
+</my-component>
+```
+
+```js
+// ./productCard.js
+const template = document.createElement('template')
+template.innerHTML = `
+    <slot name='title'></slot>
+`
+```
