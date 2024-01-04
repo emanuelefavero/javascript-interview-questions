@@ -50,25 +50,34 @@
         price="$1.00"
         image="./images/apple.png"
         status="Not Sold"
-      ></product-card>
+      >
+        <!-- We can pass html elements inside the component with slot -->
+        <span slot="title">Apple</span>
+      </product-card>
       <product-card
         pname="Orange"
         price="$0.40"
         image="./images/orange.png"
         status="Not Sold"
-      ></product-card>
+      >
+        <span slot="title">Orange</span>
+      </product-card>
       <product-card
         pname="Grape"
         price="$1.50"
         image="./images/grape.png"
         status="Not Sold"
-      ></product-card>
+      >
+        <span slot="title">Grape</span>
+      </product-card>
       <product-card
         pname="Banana"
         price="$0.50"
         image="./images/banana.png"
         status="Not Sold"
-      ></product-card>
+      >
+        <span slot="title">Banana</span>
+      </product-card>
     </main>
 
     <script src="./productCard.js"></script>

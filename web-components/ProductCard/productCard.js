@@ -71,7 +71,8 @@ template.innerHTML = `
   <img width='130' />
   <div class="container">
     <h3>
-      <span class='product-name'></span>
+      <!-- pass html inside the component with slot tag -->
+      <slot name='title'></slot>
       <span class='price'></span>
     </h3>
     <p></p>
@@ -94,8 +95,6 @@ class ProductCard extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true))
 
     // Add dynamic data
-    this.shadowRoot.querySelector('.product-name').innerText =
-      this.getAttribute('pname')
     this.shadowRoot.querySelector('.price').innerText =
       this.getAttribute('price')
     this.shadowRoot.querySelector('img').src = this.getAttribute('image')
