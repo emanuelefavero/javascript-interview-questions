@@ -6,17 +6,50 @@
     <title>Web Component</title>
 
     <style>
-      h1 {
-        color: blue;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Inter',
+          'SF Pro', 'San Francisco Pro', 'Helvetica Neue', Helvetica, 'Segoe UI',
+          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+        background-color: #f8fafc;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 2rem;
+      }
+
+      header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
     </style>
   </head>
   <body>
-    <h1>Header Section</h1>
-    <product-card></product-card>
-    <product-card></product-card>
-    <product-card></product-card>
-    <product-card></product-card>
+    <header>
+      <h1>Header Section</h1>
+    </header>
+
+    <main>
+      <product-card></product-card>
+      <product-card></product-card>
+      <product-card></product-card>
+      <product-card></product-card>
+    </main>
 
     <script src="./productCard.js"></script>
   </body>
