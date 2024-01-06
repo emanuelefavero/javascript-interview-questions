@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is an example app for Ajax and XMLHttpRequest</h1>
+    <button id="button">Fetch Users</button>
+    <div id="result"></div>
+
+    <script>
+      // fetch users from the JSON Placeholder API
+      function fetchUsers() {
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
+
+        xhr.onload = () => {
+          if (xhr.status === 200) {
+            const users = JSON.parse(xhr.response)
+
+            const result = document.getElementById('result')
+            result.innerHTML = users
+              .map((user) => {
+                return `<div>${user.name}</div>`
+              })
+              .join('') // join() is used to remove the comma between the names
+          } else {
+            console.log('Error')
+          }
+        }
+
+        xhr.send()
+      }
+
+      const button = document.getElementById('button')
+      button.addEventListener('click', fetchUsers)
+    </script>
+  </body>
+</html>
