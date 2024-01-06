@@ -37,3 +37,18 @@ fetchUsers()
 */
 
 // TIP: you can use try/catch block to handle errors
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: Can you write await without async?
+// A: No, await can only be used inside an async function
+
+// Q: Do you need to return a promise from an async function?
+// A: No, you can return any value from an async function. It will be wrapped in a promise automatically
+
+// Q: Can you create an async IIFE (Immediately Invoked Function Expression)?
+// A: Yes
+
+// Q: How can you handle errors with async/await?
+// A: By using try/catch block
