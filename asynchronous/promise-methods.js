@@ -59,3 +59,27 @@ promise3 = new Promise((resolve, reject) => {
 
 Promise.race([promise1, promise2, promise3]).then((data) => console.log(data))
 // Data 3
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: What will be the output of the following code?
+let a = new Promise((resolve, reject) =>
+  setTimeout(() => resolve('Data a'), 500)
+)
+let b = 'Data b (not a promise)'
+
+Promise.all([a, b]).then((data) => console.log(data))
+// ['Data a', 'Data b (not a promise)']
+// A: The value of b is not a promise, but Promise.all() accepts any iterable, so it will be wrapped in a resolved promise.
+
+// Q: How can you handle multiple rejected promises in an efficient way?
+// A: By using Promise.allSettled()
+
+// Q: Explain the purpose of Promise.race()
+// A: It returns the first promise that resolves or rejects regardless of the order in the array
+
+// Q: What will be the output of the following code?
+let pr = Promise.race([])
+console.log(pr) // Promise { <pending> }
+// A: The promise will be pending forever because there are no promises to resolve or reject
