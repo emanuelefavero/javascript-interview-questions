@@ -45,3 +45,25 @@ postData()
 // {title: "my title", body: "my text", userId: 1, id: 101}
 
 // TIP: To get the status code of the response, you can use response.status or response.ok
+
+// ------------------------------------------------------------
+// QUESTIONS
+
+// Q: Explain the Fetch API
+// A: The Fetch API is a JavaScript interface for making network requests, providing a more efficient and flexible alternative to XMLHttpRequest. It is promise-based, allowing for simpler and cleaner asynchronous code
+
+// Q: How can you make a DELETE request with fetch?
+
+// fetch(url, {
+//   method: 'DELETE', // GET, POST, PUT, DELETE, etc.
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+
+//   // pass the id of the item you want to delete (the server will handle the deletion)
+//   body: JSON.stringify({
+//     id: 1,
+//   }),
+// })
+
+// A: By using the DELETE method
