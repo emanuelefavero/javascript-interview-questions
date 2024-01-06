@@ -36,6 +36,35 @@
 
       const button = document.getElementById('button')
       button.addEventListener('click', fetchUsers)
+
+      // ------------------------------
+      // QUESTIONS
+
+      // Q: What is AJAX?
+      // A: AJAX, or Asynchronous JavaScript and XML, is a client-side web development technique that allows web applications to communicate with a server in the background without refreshing the page, thus making web pages dynamic and interactive. It is also used to open files.
+
+      // Q: How can you set a timeout in AJAX?
+      // request.timeout = 10000; // time in milliseconds
+
+      // A: You can use request.timeout property to set a timeout for the request. The value of this property is in milliseconds. If the request takes longer than the timeout value, the request will be aborted.
+
+      // Q: How can you set the returned format of AJAX call?
+      // request.responseType = 'json'
+
+      // A: You can use request.responseType property to set the returned format of AJAX call. The possible values are: arraybuffer, blob, document, json, text, ms-stream.
+
+      // Q: Explain "readyState" in AJAX
+      // A: readyState returns various values depending on the state of the request. The possible values are: 0, 1, 2, 3, 4. The value 4 means that the request is completed and the response is ready. "onreadystatechange" event is fired when the readyState changes.
+
+      // Q: When is the "load" event called in AJAX?
+      // A: When the request is completed and the response is ready, the "load" event is fired.
+
+      // Q: How can you set the HTTP headers?
+      // XMLHttpRequest.setRequestHeader('Content-Type', 'application/json')
+      // A: You can use setRequestHeader() method to set the HTTP headers. This method must be called after the open() method and before the send() method.
+
+      // Q: How can we get the response headers values?
+      // request.getResponseHeader('Content-Type') or request.getAllResponseHeaders()
     </script>
   </body>
 </html>
