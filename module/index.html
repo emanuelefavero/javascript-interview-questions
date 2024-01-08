@@ -15,6 +15,7 @@
 
       import { isEven } from './utils.js' // named export
       import sum from './calculate.js' // default export
+      import subtract from './subtract.js'
 
       // TIP: You can also import everything from a file using the * wildcard
       // import * as utils from './utils.js'
@@ -26,7 +27,7 @@
       const output = document.getElementById('output')
       const output2 = document.getElementById('output2')
       output.innerHTML = isEven(10) // true
-      output2.innerHTML = sum(10, 20) // 30
+      output2.innerHTML = sum(10, 20) + subtract(2, 1) // 31
 
       // ----------------------------
       // QUESTIONS
