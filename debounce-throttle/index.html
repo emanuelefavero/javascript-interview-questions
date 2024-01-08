@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: royalblue;
+        border: 2px solid blue;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h2 {
+        color: white;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div onmousemove="showCounts()">
+      <h2>Normal Count: <span id="normalCount">0</span></h2>
+      <h2>Throttle Count: <span id="throttleCount">0</span></h2>
+      <h2>Debounce Count: <span id="debounceCount">0</span></h2>
+    </div>
+
+    <script>
+      let normalCount = 0
+      let throttleCount = 0
+      let debounceCount = 0
+
+      let normalCountOutput = document.getElementById('normalCount')
+      let throttleCountOutput = document.getElementById('throttleCount')
+      let debounceCountOutput = document.getElementById('debounceCount')
+
+      function showCounts() {
+        showNormalCount()
+        showThrottleCount()
+        showDebounceCount()
+      }
+
+      function showNormalCount() {
+        normalCount++
+        normalCountOutput.innerHTML = normalCount
+      }
+
+      // * Throttle - limits the number of times a function can be called over a period of time
+      let fireThrottle = true
+      function showThrottleCount() {
+        if (fireThrottle) {
+          throttleCount++
+          throttleCountOutput.innerHTML = throttleCount
+
+          fireThrottle = false
+          setTimeout(() => {
+            fireThrottle = true
+          }, 500)
+        }
+      }
+
+      // * Debounce - limits the number of times a function can be called over a period of time, but only fires the function after the period of time has passed
+      // NOTE: You will see the count updating only after you stop moving the mouse for 500ms. You also need to move the mouse again and then stop moving it for 500ms to see the count update again
+      let debounceTimeout
+      function showDebounceCount() {
+        clearTimeout(debounceTimeout)
+        debounceTimeout = setTimeout(() => {
+          debounceCount++
+          debounceCountOutput.innerHTML = debounceCount
+        }, 500)
+      }
+    </script>
+  </body>
+</html>
