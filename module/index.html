@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="output"></h1>
+
+    <!-- TIP: To use import statements you need to define the script as a module -->
+    <script type="module">
+      // NOTE: If you just open the file in the browser, you will get an error. You need a server to use import statements (Live Server will work). Frameworks like React and Vue have their own servers built in
+      import { isEven } from './isEven.js'
+
+      const output = document.getElementById('output')
+      output.innerHTML = isEven(10) // true
+    </script>
+  </body>
+</html>
