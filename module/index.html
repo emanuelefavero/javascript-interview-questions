@@ -7,14 +7,26 @@
   </head>
   <body>
     <h1 id="output"></h1>
+    <h1 id="output2"></h1>
 
     <!-- TIP: To use import statements you need to define the script as a module -->
     <script type="module">
       // NOTE: If you just open the file in the browser, you will get an error. You need a server to use import statements (Live Server will work). Frameworks like React and Vue have their own servers built in
-      import { isEven } from './isEven.js'
+
+      import { isEven } from './utils.js' // named export
+      import sum from './calculate.js' // default export
+
+      // TIP: You can also import everything from a file using the * wildcard
+      // import * as utils from './utils.js'
+      // utils.isEven(10)
+
+      // TIP: you can also assign an alias to a module
+      // import { isEven as isNumberEven } from './utils.js'
 
       const output = document.getElementById('output')
+      const output2 = document.getElementById('output2')
       output.innerHTML = isEven(10) // true
+      output2.innerHTML = sum(10, 20) // 30
 
       // ----------------------------
       // QUESTIONS
