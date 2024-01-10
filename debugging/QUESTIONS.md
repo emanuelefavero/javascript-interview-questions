@@ -55,3 +55,15 @@ You can add a breakpoint programmatically by using the `debugger` statement.
 You can add a conditional breakpoint by right clicking on the line number and selecting "Add conditional breakpoint". You can also add a conditional breakpoint programmatically by using the `debugger` statement with a condition.
 
 > TIP: A conditional breakpoint is a breakpoint that only pauses the execution of the code if a condition is met. (e.g. `n > 10`)
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## How to pause the execution of the code when an exception is thrown?
+
+You can pause the execution of the code when an exception is thrown by clicking on the pause icon in the sources tab of the developer tools and selecting "Pause on exceptions".
+
+> TIP: Exceptions are errors that occur when the code is running (e.g. `TypeError: Cannot read property 'name' of undefined`)
