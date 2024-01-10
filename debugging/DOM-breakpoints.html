@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addNode()">Add Node</button>
+    <button onclick="changeColor()">Change Color</button>
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById('output')
+
+      function addNode() {
+        // add node
+        const newNode = document.createElement('h2')
+        newNode.innerHTML = 'New Node'
+        output.appendChild(newNode)
+
+        // remove node on click
+        newNode.addEventListener('click', () => {
+          newNode.remove()
+        })
+      }
+
+      function changeColor() {
+        if (output.style.color === 'crimson') output.style.color = 'black'
+        else output.style.color = 'crimson'
+      }
+
+      // ------------------------------
+      // DOM Breakpoints
+
+      // In the elements tab you can right click on an element and add a DOM breakpoint. This will trigger a breakpoint when the selected event is fired on the selected element.
+
+      // TIP: You can see the DOM breakpoints in the DOM Breakpoints tab in the sources tab
+
+      // TIP: To add a DOM breakpoint, right click on an element in the elements tab and select Break on -> [event]
+
+      // Types of DOM breakpoints:
+      // - Subtree modifications (any change to the DOM)
+      // - Attribute modifications (any change to an attribute)
+      // - Node removal (when the node is removed)
+    </script>
+  </body>
+</html>
