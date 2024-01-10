@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <input type="number" id="n1" class="input" />
+        <input type="number" id="n2" class="input" />
+        <input
+          type="submit"
+          class="submit-button"
+          onclick="sum()"
+          value="Add"
+        />
+      </div>
+    </div>
+
+    <h2 id="output"></h2>
+
+    <script>
+      function sum() {
+        let n1 = document.querySelector('#n1').value
+        let n2 = document.querySelector('#n2').value
+        let output = document.querySelector('#output')
+
+        output.innerHTML = parseInt(n1) + parseInt(n2)
+      }
+
+      // OPEN THIS FILE IN THE BROWSER AND OPEN THE DEVELOPER TOOLS
+
+      // Watch
+      // In the watch tab, you can add variables to watch, and see their values change as you step through your code. You can also change the value of a variable in the watch tab, and see the change reflected in your code.
+
+      // TIP: Just click on the + icon in the watch tab and type the variable name you want to watch
+
+      // Scope
+      // The scope tab shows you the variables that are in scope at the current point in the program.
+
+      // Call Stack
+      // The call stack tab shows you the current call stack. This is the list of functions that have been called to get to the current point in the program. The top of the call stack is the function that is currently executing. You can click on any function in the call stack to jump to the line of code where that function was called
+    </script>
+  </body>
+</html>

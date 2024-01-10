@@ -23,5 +23,3 @@ Responsive web design is an approach to web design that makes web pages render w
 ## What is a breakpoint and how do you add one?
 
 A breakpoint is a point in the code where the debugger will pause the execution of the code. You can add a breakpoint by clicking on the line number in the source tab of the developer tools.
-
-<!-- TODO commit questions -->
