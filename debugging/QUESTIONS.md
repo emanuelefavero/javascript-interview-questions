@@ -23,3 +23,19 @@ Responsive web design is an approach to web design that makes web pages render w
 ## What is a breakpoint and how do you add one?
 
 A breakpoint is a point in the code where the debugger will pause the execution of the code. You can add a breakpoint by clicking on the line number in the source tab of the developer tools.
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## How does the watch panel work?
+
+The watch panel allows you to watch the value of a variable. You can add a variable to the watch panel by clicking on the + icon and typing the name of the variable. You can also change the value of a variable
+
+## What is a stack trace?
+
+A stack trace is a report that provides information about the sequence of function calls that led to a specific point in a program, particularly when an error occurs.
+
+> The call stack is a data structure that records the function calls, invoked by the program at any point in time
