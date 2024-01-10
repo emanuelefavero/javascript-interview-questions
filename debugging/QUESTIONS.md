@@ -39,3 +39,19 @@ The watch panel allows you to watch the value of a variable. You can add a varia
 A stack trace is a report that provides information about the sequence of function calls that led to a specific point in a program, particularly when an error occurs.
 
 > The call stack is a data structure that records the function calls, invoked by the program at any point in time
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## How can we add a breakpoint programmatically?
+
+You can add a breakpoint programmatically by using the `debugger` statement.
+
+## How can we add a conditional breakpoint?
+
+You can add a conditional breakpoint by right clicking on the line number and selecting "Add conditional breakpoint". You can also add a conditional breakpoint programmatically by using the `debugger` statement with a condition.
+
+> TIP: A conditional breakpoint is a breakpoint that only pauses the execution of the code if a condition is met. (e.g. `n > 10`)
