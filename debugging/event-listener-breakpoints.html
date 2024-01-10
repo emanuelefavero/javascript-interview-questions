@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <input type="number" id="n1" class="input" />
+        <input type="number" id="n2" class="input" />
+        <input
+          type="submit"
+          class="submit-button"
+          onclick="sum()"
+          value="Add"
+        />
+      </div>
+    </div>
+
+    <h2 id="output"></h2>
+
+    <script>
+      function sum() {
+        let n1 = document.querySelector('#n1').value
+        let n2 = document.querySelector('#n2').value
+        let output = document.querySelector('#output')
+
+        output.innerHTML = parseInt(n1) + parseInt(n2)
+
+        // OPEN THIS FILE IN THE BROWSER AND OPEN THE DEVELOPER TOOLS
+
+        // Event Listener Breakpoints
+        // In the sources tab, you can ass event listener breakpoints that will fire when the selected event listener is chosen
+
+        // TIP: In the Parse sub menu you can choose a breakpoint for innerHTML
+      }
+    </script>
+  </body>
+</html>
