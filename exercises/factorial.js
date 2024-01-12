@@ -10,3 +10,18 @@ function factorial(n) {
 }
 
 console.log(factorial(4)) // 24, since 4 * 3 * 2 * 1 = 24
+
+// ---------------------------------------------------------------
+// * Solution 2
+
+function factorial2(n) {
+  let result = 1
+
+  while (n >= 1) {
+    result = result * n--
+  }
+
+  return result
+}
+
+console.log(factorial2(4)) // 24
