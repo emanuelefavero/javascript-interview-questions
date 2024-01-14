@@ -40,3 +40,23 @@ class Bird {
 
 console.log(Bird.name) // budgie
 console.log(Bird.getColor('white')) // white
+
+// * Inheritance
+class Animal {
+  constructor(name) {
+    this.name = name
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, color) {
+    super(name) // call the parent constructor with super
+    this.color = color
+  }
+  getName() {
+    return this.name
+  }
+}
+
+let cat = new Cat('cat', 'white')
+console.log(cat.getName()) // cat
