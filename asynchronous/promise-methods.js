@@ -13,7 +13,7 @@ let promise3 = new Promise((resolve, reject) => {
 })
 
 Promise.all([promise1, promise2, promise3]).then((data) => console.log(data))
-// ['Data 1', 'Data 2']
+// ['Data 1', 'Data 2', 'Data 3']
 
 // TIP: If any of the passed promises rejects, Promise.all asynchronously rejects with the value of the promise that rejected, whether or not the other promises have resolved.
 

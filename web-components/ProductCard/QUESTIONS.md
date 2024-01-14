@@ -49,7 +49,7 @@ You can add a component to the Shadow DOM by using the `attachShadow` method
 this.attackShadow({ mode: 'open' }) // open means that you can access the shadow DOM from outside the component
 ```
 
-## WHat is the purpose of the `<template>` html tag?
+## What is the purpose of the `<template>` html tag?
 
 The `<template>` tag is used to declare fragments of HTML that can be cloned and inserted in the document by script
 
