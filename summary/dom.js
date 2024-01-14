@@ -55,3 +55,43 @@
 
 // * Access siblings of an element
 // `element.nextSibling` and `element.previousSibling`
+
+// ------------------------------------------------------------
+
+// * Disable double click on an element
+// `element.ondblclick = (event) => event.preventDefault()`
+
+// * Check mouse position while moving the mouse
+// document.onmousemove = (event) => {
+//   console.log(`Mouse position: ${event.clientX}, ${event.clientY}`)
+// }
+
+// * pageX/Y, clientX/Y, screenX/Y
+// pageX/Y - mouse position relative to the top left corner of the entire page
+// clientX/Y - mouse position relative to the top left corner of the viewport
+// screenX/Y - mouse position relative to the top left corner of the screen
+
+// * Check if two keys are pressed at the same time
+// document.onkeydown = (event) => {
+//   if (event.ctrlKey && event.key === 's') console.log('hi)
+// }
+
+// * Check which key is pressed
+// document.onkeydown = (event) => {
+//   console.log(event.key)
+// }
+
+// * Handle checkbox events
+/*
+document.getElementById('myCheckbox').addEventListener('change', function(event) {
+  if (this.checked) console.log('checked')
+  else console.log('unchecked')
+})
+*/
+
+// * Prevent Cut, Copy, Paste events
+/*
+element.addEventListener('copy', (event) => {
+    event.preventDefault()
+});
+*/
