@@ -13,3 +13,17 @@ console.log(regex) // [ 'Hello', 'Hello', 'Hello' ]
 
 regex = text.match(/\d$/gm) // ? match all lines that end with a digit
 console.log(regex) // [ '1', '2', '3']
+
+// * . (dot) matches any character except newline
+text = 'Hello Hola'
+regex = text.match(/h.l/gi)
+console.log(regex) // [ 'Hel', 'Hol' ]
+
+// * /s modifier: single line. Causes . to match new line characters as well
+text = `
+Hello line 1
+Hola line 2
+`
+
+regex = text.match(/h.l/gis)
+console.log(regex) // [ 'Hel', 'Hol' ]
