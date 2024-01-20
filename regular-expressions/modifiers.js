@@ -1,14 +1,28 @@
+// * /i modifier: case insensitive
+// The i modifier is used to perform case-insensitive matching
+
+let text = 'Hello hola'
+let regex = text.match(/h.l/i)
+console.log(regex) // [ 'Hel', index: 0, ... ]
+
+// * /g modifier: global match
+// The g modifier is used to perform a global match (find all matches rather than stopping after the first match)
+
+text = 'Hello hola'
+regex = text.match(/h.l/gi)
+console.log(regex) // [ 'Hel', 'hol' ]
+
 // * /m modifier: multi line. Causes ^ and $ to match the begin/end of each line (not only begin/end of string)
 
 // TIP: By using template literals, we can write multi-line strings in JavaScript instead of using \n
 
-let text = `
+text = `
 Hello line 1
 Hello line 2
 Hello line 3
 `
 
-let regex = text.match(/^Hello/gm) // ? match all lines that start with Hello
+regex = text.match(/^Hello/gm) // ? match all lines that start with Hello
 console.log(regex) // [ 'Hello', 'Hello', 'Hello' ]
 
 regex = text.match(/\d$/gm) // ? match all lines that end with a digit
@@ -27,11 +41,6 @@ Hola line 2
 
 regex = text.match(/h.l/gis)
 console.log(regex) // [ 'Hel', 'Hol' ]
-
-// * /i modifier: case insensitive
-text = 'Hello hola'
-regex = text.match(/h.l/gi)
-console.log(regex) // [ 'Hel', 'hol' ]
 
 // * exec() method
 // The exec() method executes a search for a match in a specified string. Returns a result array, or null.
@@ -63,3 +72,10 @@ console.log(text.match(regex)) // [ 'H', 'e', 'l', 'l', 'o' ]
 text = 'Hello hola'
 regex = /\W/gi
 console.log(text.match(regex)) // [ ' ' ] (space is a non-word character)
+
+// * /y modifier: sticky
+// The sticky flag return null if there is no match
+text = 'Hello hola'
+regex = /\w+/y
+console.log(regex.exec(text)) // [ 'Hello', index: 0, ... ]
+console.log(regex.exec(text)) // null, because there is no more matches (the next match is 'hola' but since there is a space before it, it will not match)
