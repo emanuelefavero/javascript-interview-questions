@@ -32,3 +32,34 @@ console.log(regex) // [ 'Hel', 'Hol' ]
 text = 'Hello hola'
 regex = text.match(/h.l/gi)
 console.log(regex) // [ 'Hel', 'hol' ]
+
+// * exec() method
+// The exec() method executes a search for a match in a specified string. Returns a result array, or null.
+text = 'Hello hola'
+regex = /h.l/gi
+console.log(regex.exec(text)) // [ 'Hel', index: 0, ... ]
+console.log(regex.exec(text)) // [ 'hol', index: 6, ... ]
+console.log(regex.exec(text)) // null, because there is no more matches
+
+// * lastIndex property
+// The lastIndex property specifies the index at which to start the next match.
+text = 'Hello hola'
+regex = /h.l/gi
+console.log(regex.lastIndex) // 0
+regex.lastIndex = 5
+console.log(regex.exec(text)) // [ 'hol', index: 6, ... ]
+
+// * \w+ matches any word character (equal to [a-zA-Z0-9_])
+text = 'Hello hola'
+regex = /\w+/gi
+console.log(text.match(regex)) // [ 'Hello', 'hola' ]
+
+// * \w matches any word character (equal to [a-zA-Z0-9_]) but only one character
+text = 'Hello'
+regex = /\w/gi
+console.log(text.match(regex)) // [ 'H', 'e', 'l', 'l', 'o' ]
+
+// * \W matches any non-word character (equal to [^a-zA-Z0-9_])
+text = 'Hello hola'
+regex = /\W/gi
+console.log(text.match(regex)) // [ ' ' ] (space is a non-word character)
