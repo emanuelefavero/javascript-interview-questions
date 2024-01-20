@@ -27,3 +27,8 @@ Hola line 2
 
 regex = text.match(/h.l/gis)
 console.log(regex) // [ 'Hel', 'Hol' ]
+
+// * /i modifier: case insensitive
+text = 'Hello hola'
+regex = text.match(/h.l/gi)
+console.log(regex) // [ 'Hel', 'hol' ]
