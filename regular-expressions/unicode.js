@@ -11,3 +11,33 @@ console.log('\u{1F602}') // 😂, you can also represent emojis with unicode lik
 
 // TIP: A grapheme in unicode context is a user-perceived character
 // TIP: A glyph is a graphical representation of a character (a character can have multiple glyphs, e.g. e and é)
+
+// ------------------------------------------------------------
+// * Nice unicode characters
+
+console.log('\u0f42') // ག
+console.log('\u0f44') // ང
+console.log('\u0f47') // ཇ
+console.log('\u0fd2') // ࿒
+console.log('\u0fd2') // ࿒
+console.log('\u10bf') // Ⴟ
+console.log('\u1109') // ᄉ
+console.log('\u1101') // ᄁ
+console.log('\u1140') // ᅀ
+console.log('\u1173') // ᅳ
+console.log('\u1185') // ᆅ
+console.log('\u1323') // ጣ
+console.log('\u1368') // ፨
+console.log('\u1401') // ᐁ
+console.log('\u140b') // ᐋ
+console.log('\u1421') // ᐡ
+console.log('\u1424') // ᐤ
+console.log('\u1431') // ᐱ
+console.log('\u14a7') // ᒧ
+console.log('\u23f5') // ⏵
+console.log('\u25b6') // ▶
+console.log('\u25ae') // ▮
+console.log('\u289a') // ⢚
+console.log('\u2ee8') // ⻨
+console.log('\u3294') // ㊔
+console.log('\ufed2') // ﻒ
