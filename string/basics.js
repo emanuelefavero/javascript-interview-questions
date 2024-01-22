@@ -7,6 +7,11 @@ console.log(str[0]) // 'h'
 // we can also use the charAt method
 console.log(str.charAt(0)) // 'h'
 
+// TIP: Strings in JavaScript are immutable, meaning they cannot be changed once created
+// str[0] = 'j' // ! This will not work
+
+// TIP: To change a string, we must create a new string
+
 // ------------------------------------------------------------
 
 // we can use single and double quotes interchangeably
