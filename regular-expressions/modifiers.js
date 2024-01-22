@@ -87,3 +87,11 @@ regex = /\u{1F602}/gu // unicode for 😂
 console.log(text.match(regex)) // [ '😂' ]
 
 // TIP: Check ./unicode.js for more information about unicode
+
+// * \u with \p matches any character in a unicode category (equal to \p{...})
+// The unicode flag enable unicode matching
+text = 'Hello I am happy 😂'
+regex = /\p{Emoji}/gu // match any emoji
+console.log(text.match(regex)) // [ '😂' ]
+regex = /\p{S}/gu // match any symbol (which includes emojis)
+console.log(text.match(regex)) // [ '😂' ]
