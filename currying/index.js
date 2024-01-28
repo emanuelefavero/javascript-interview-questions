@@ -41,4 +41,14 @@ console.log(addTwo) // [Function (anonymous)]
 let addFour = addTwo(4)
 console.log(addFour) // 7, (1 + 2 + 4 = 7)
 
-// TODO commit currying/index.js
+// ---------------------------------------------------------------
+// * ES6 Shorthand for Currying
+const subtract = (a) => (b) => (c) => a - b - c
+
+console.log(subtract(10)(5)(3)) // 2, (10 - 5 - 3 = 2)
+
+let subtractFive = subtract(5)
+let subtractTwo = subtractFive(2)
+let subtractOne = subtractTwo(1)
+
+console.log(subtractOne) // 2, (5 - 2 - 1 = 2)
