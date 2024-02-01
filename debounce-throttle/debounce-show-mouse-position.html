@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <script>
+      const h1 = document.querySelector('h1')
+
+      function showMousePosition(e) {
+        const mouseX = e.clientX
+        const mouseY = e.clientY
+
+        h1.innerHTML = `Mouse X position: ${mouseX} <br> Mouse Y position: ${mouseY}`
+      }
+
+      // Debounce function
+      let debounceTimeout
+      function debounce(e) {
+        clearTimeout(debounceTimeout)
+        debounceTimeout = setTimeout(() => showMousePosition(e), 20)
+      }
+
+      // Adding event listener with debouncing
+      document.addEventListener('mousemove', debounce)
+    </script>
+  </body>
+</html>
