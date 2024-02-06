@@ -14,11 +14,12 @@ console.log(
 // take account of leap years
 
 function yearsBetweenTwoDates(date1, date2) {
-  let startMilliseconds = date1.getTime()
-  let endMilliseconds = date2.getTime()
+  const startMilliseconds = date1.getTime()
+  const endMilliseconds = date2.getTime()
 
-  let millisecondsDifference = Math.abs(startMilliseconds - endMilliseconds)
-  let yearsDifference = millisecondsDifference / (1000 * 60 * 60 * 24 * 365.25)
+  const millisecondsDifference = Math.abs(startMilliseconds - endMilliseconds)
+  const yearsDifference =
+    millisecondsDifference / (1000 * 60 * 60 * 24 * 365.25)
 
   // ? 365.25 takes account of leap years (365 days + 1 day every 4 years (.25))
 
