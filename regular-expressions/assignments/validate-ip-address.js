@@ -19,5 +19,3 @@ regex = new RegExp(
 
 console.log(regex.test('192.168.8.1')) // true
 console.log(regex.test('192.168')) // false
-
-// TODO commit .../assignments/validate-ip-address
