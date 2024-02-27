@@ -17,5 +17,3 @@ Array.prototype.customFilter = function (callback) {
 
 console.log([1, 2, 3, 4, 5].customFilter((value) => value > 3)) // [4, 5]
 console.log([1, 2, 3, 4, 5].customFilter((value) => value < 3)) // [1, 2]
-
-// TODO commit custom-array-methods/filter
