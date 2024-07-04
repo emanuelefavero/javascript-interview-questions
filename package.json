@@ -1,0 +1,15 @@
+{
+  "name": "javascript-interview-questions",
+  "version": "1.0.0",
+  "description": "This repository contains a number of JavaScript interview questions that could come up during technical interviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Emanuele Favero",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^9.3.3"
+  }
+}
