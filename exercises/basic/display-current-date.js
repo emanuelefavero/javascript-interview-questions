@@ -42,3 +42,27 @@ function currentDateAndTime(date = new Date()) {
 }
 
 console.log(currentDateAndTime())
+
+// -----------------------------------------------
+// * Solution 2
+
+function currentDateAndTime2() {
+  // Get current date
+  let date = new Date()
+
+  // Get day of the week
+  let weekDay = date.toLocaleString('en-US', { weekday: 'long' })
+
+  // Get time in 12-hour format
+  let clock = date.toLocaleString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: true,
+  })
+
+  // Output
+  return `Today is: ${weekDay}\nCurrent time is: ${clock}`
+}
+
+console.log(currentDateAndTime2())
