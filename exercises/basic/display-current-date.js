@@ -5,11 +5,9 @@ Today is: Tuesday
 Current time is: 10 PM:30:38
 */
 
-function currentDateAndTime() {
-  let now = new Date()
-
+function currentDateAndTime(date = new Date()) {
   // Get day of the week
-  let weekDays = [
+  let WEEK_DAYS = [
     'Sunday',
     'Monday',
     'Tuesday',
@@ -18,13 +16,13 @@ function currentDateAndTime() {
     'Friday',
     'Saturday',
   ]
-  let weekDay = weekDays[now.getDay()]
+  let weekDay = WEEK_DAYS[date.getDay()]
 
   // Get time data
-  let hours = now.getHours()
+  let hours = date.getHours()
   let amOrPm = hours >= 12 ? 'PM' : 'AM'
-  let minutes = now.getMinutes()
-  let seconds = now.getSeconds()
+  let minutes = date.getMinutes()
+  let seconds = date.getSeconds()
 
   // Format time utility
   const format = (time) => time.toString().padStart(2, '0')
