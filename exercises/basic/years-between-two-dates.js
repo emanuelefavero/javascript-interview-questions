@@ -1,4 +1,5 @@
 // * Calculate the number of years between two dates
+
 function yearsBetween(date1, date2) {
   const diff = date2.getTime() - date1.getTime()
   const msPerYear = 1000 * 60 * 60 * 24 * 365.25 // .25 accounts for leap years

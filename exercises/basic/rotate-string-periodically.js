@@ -1,3 +1,5 @@
+// * Rotate a string periodically
+
 function rotate(str) {
   return str.slice(-1) + str.slice(0, -1)
 }
