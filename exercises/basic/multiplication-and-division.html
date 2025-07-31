@@ -4,18 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      form {
+        border: 1px solid #ccc;
+        max-width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.5rem;
+
+        div {
+          label[for='firstNumber'],
+          label[for='secondNumber'] {
+            display: inline-block;
+            min-width: 11ch;
+          }
+
+          /* Add focus state to buttons with shadow */
+          button {
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 0.2rem;
+
+            &:focus {
+              box-shadow: inset 0 0 0 1px oklch(71.5% 0.143 215.221);
+            }
+          }
+        }
+
+        label[for='result'] {
+          margin-top: 1.25rem;
+        }
+
+        #result {
+          min-height: 1.25rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <form id="mathForm">
-      <label for="firstNumber">1st Number:</label>
-      <input type="number" id="firstNumber" name="firstNumber" required />
-      <label for="secondNumber">2nd Number:</label>
-      <input type="number" id="secondNumber" name="secondNumber" required />
-      <label for="operation">Operation:</label>
+      <div>
+        <label for="firstNumber">1st Number:</label>
+        <input type="number" id="firstNumber" name="firstNumber" required />
+      </div>
 
-      <button type="button" id="multiply">Multiply</button>
-      <button type="button" id="divide">Divide</button>
+      <div>
+        <label for="secondNumber">2nd Number:</label>
+        <input type="number" id="secondNumber" name="secondNumber" required />
+      </div>
 
+      <div>
+        <button type="button" id="multiply">Multiply</button>
+        <button type="button" id="divide">Divide</button>
+      </div>
+
+      <label for="result">The Result Is:</label>
       <div id="result"></div>
     </form>
 
