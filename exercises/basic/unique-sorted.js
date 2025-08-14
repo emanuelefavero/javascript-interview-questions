@@ -9,7 +9,7 @@ Returns the new array.
 */
 
 function uniqueSorted(nums) {
-  let set = new Set([...nums]) // Remove all duplicates
+  let set = new Set(nums) // Remove all duplicates
   return [...set].sort((a, b) => a - b) // Return sorted array
 }
 
@@ -29,8 +29,8 @@ Are sorted in ascending order.
 */
 
 function intersectionSorted(nums1, nums2) {
-  let set1 = new Set([...nums1])
-  let set2 = new Set([...nums2])
+  let set1 = new Set(nums1)
+  let set2 = new Set(nums2)
   let result = []
 
   set1.forEach((num) => {
