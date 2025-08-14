@@ -9,7 +9,7 @@ Returns the new array.
 */
 
 function uniqueSorted(nums) {
-  let set = new Set(nums) // Remove all duplicates
+  const set = new Set(nums) // Remove all duplicates
   return [...set].sort((a, b) => a - b) // Return sorted array
 }
 
@@ -28,10 +28,11 @@ Have no duplicates in the result.
 Are sorted in ascending order.
 */
 
+// Solution 1
 function intersectionSorted(nums1, nums2) {
-  let set1 = new Set(nums1)
-  let set2 = new Set(nums2)
-  let result = []
+  const set1 = new Set(nums1)
+  const set2 = new Set(nums2)
+  const result = []
 
   set1.forEach((num) => {
     if (set2.has(num)) result.push(num)
@@ -41,4 +42,21 @@ function intersectionSorted(nums1, nums2) {
 }
 
 console.log(intersectionSorted([4, 2, 5, 2, 1, 4], [5, 3, 4, 4, 2]))
+// [2, 4, 5]
+
+// Solution 2
+function intersectionSorted2(nums1, nums2) {
+  const set = new Set(nums1)
+  const result = []
+
+  for (const num of nums2) {
+    if (set.has(num) && !result.includes(num)) {
+      result.push(num)
+    }
+  }
+
+  return result.sort((a, b) => a - b)
+}
+
+console.log(intersectionSorted2([4, 2, 5, 2, 1, 4], [5, 3, 4, 4, 2]))
 // [2, 4, 5]
