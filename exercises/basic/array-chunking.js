@@ -5,7 +5,7 @@
 // TIP: In-place solution
 
 function chunkArray(array, size) {
-  let result = []
+  const result = []
 
   while (array.length) {
     result.push(array.splice(0, size))
@@ -21,7 +21,7 @@ console.log(chunkArray([1, 2, 3, 4, 5, 6], 3)) // [[1, 2, 3], [4, 5, 6]]
 
 // TIP: Functional programming solution
 function chunkArray2(array, size) {
-  let result = []
+  const result = []
 
   for (let i = 0; i < array.length; i += size) {
     result.push(array.slice(i, i + size))
@@ -32,3 +32,21 @@ function chunkArray2(array, size) {
 
 console.log(chunkArray2([1, 2, 3, 4, 5], 2)) // [[1, 2], [3, 4], [5]]
 console.log(chunkArray2([1, 2, 3, 4, 5, 6], 3)) // [[1, 2, 3], [4, 5, 6]]
+
+// ---
+
+// TIP: Functional programming solution 2
+function chunkArray3(array, size) {
+  const result = []
+  let start = 0
+
+  while (start < array.length) {
+    result.push(array.slice(start, start + size))
+    start += size
+  }
+
+  return result
+}
+
+console.log(chunkArray3([1, 2, 3, 4, 5], 2)) // [[1, 2], [3, 4], [5]]
+console.log(chunkArray3([1, 2, 3, 4, 5, 6], 3)) // [[1, 2, 3], [4, 5, 6]]
