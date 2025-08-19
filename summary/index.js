@@ -101,11 +101,16 @@ console.log(obj4) // { id: 0, name: 'Jack' }
 // Promises
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve()
-  }, 1000)
+    let success = true
+
+    if (success) resolve('Success')
+    else reject('Error')
+  }, 100)
 })
 
-promise.then(() => console.log('Promise resolved')) // Promise resolved
+promise
+  .then((result) => console.log(result))
+  .catch((error) => console.error(error))
 
 // Async/Await
 async function main9() {
