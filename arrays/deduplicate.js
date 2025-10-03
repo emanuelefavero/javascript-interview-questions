@@ -13,8 +13,8 @@ console.log(deduplicate(array)) // [1, 2, 3]
 
 // 2 - With a map
 function deduplicate2(array) {
-  let map = new Map()
-  let result = []
+  const map = new Map()
+  const result = []
 
   for (const num of array) {
     if (!map.has(num)) result.push(num)
@@ -38,3 +38,14 @@ function deduplicate3(array) {
   return result
 }
 console.log(deduplicate3(array)) // [1, 2, 3]
+
+// 4 - With filter and indexOf
+/*
+? Why use indexOf?
+- indexOf(num) finds the first occurrence of num.
+- By comparing it to the current index, we ensure only the first occurrence is included in the result.
+*/
+function deduplicate4(array) {
+  return array.filter((num, index) => array.indexOf(num) === index)
+}
+console.log(deduplicate4(array)) // [1, 2, 3]
