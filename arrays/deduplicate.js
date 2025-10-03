@@ -24,3 +24,17 @@ function deduplicate2(array) {
   return result
 }
 console.log(deduplicate2(array)) // [1, 2, 3]
+
+// 3 - With an object
+function deduplicate3(array) {
+  const hash = {}
+  const result = []
+
+  for (const num of array) {
+    if (hash[num] === undefined) result.push(num)
+    hash[num] = true
+  }
+
+  return result
+}
+console.log(deduplicate3(array)) // [1, 2, 3]
