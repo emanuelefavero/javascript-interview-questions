@@ -21,3 +21,19 @@ function flatten2(array, result = []) {
 }
 
 console.log(flatten2(array))
+
+// 3 - With Recursion 2
+function flatten3(array) {
+  const result = []
+
+  for (const item of array) {
+    if (Array.isArray(item)) {
+      result.push(...flatten3(item))
+    } else {
+      result.push(item)
+    }
+  }
+
+  return result
+}
+console.log(flatten3(array)) // [1, 2, 3, 4, 5, 6]
