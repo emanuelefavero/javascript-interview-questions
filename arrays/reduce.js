@@ -1,4 +1,4 @@
-// * flatten 2d array
+// * Reduce
 
 let arr = [2, 4, 3]
 
