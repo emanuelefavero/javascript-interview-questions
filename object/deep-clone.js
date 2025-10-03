@@ -14,3 +14,10 @@ let obj = {
 let clone = JSON.parse(JSON.stringify(obj))
 console.log(clone)
 console.log(clone === obj) // false
+
+// Check if two objects are equal
+function equal(obj1, obj2) {
+  return JSON.stringify(obj1) === JSON.stringify(obj2)
+}
+
+console.log(equal(obj, clone))
