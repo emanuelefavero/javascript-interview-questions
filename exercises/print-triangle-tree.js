@@ -5,10 +5,19 @@
 // Left Triangle
 function printLeftTriangle(height) {
   let char = ''
-  for (let i = 0; i <= height; i++) {
+  for (let i = 0; i < height; i++) {
     char += '*'
     console.log(char)
   }
 }
 
 printLeftTriangle(5)
+
+// Left Triangle (with repeat)
+function printLeftTriangle2(height) {
+  for (let i = 1; i <= height; i++) {
+    console.log('*'.repeat(i))
+  }
+}
+
+printLeftTriangle2(5)
