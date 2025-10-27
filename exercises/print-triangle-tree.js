@@ -21,3 +21,28 @@ function printLeftTriangle2(height) {
 }
 
 printLeftTriangle2(5)
+/*
+*
+**
+***
+****
+*****
+*/
+
+// Tree (or pyramid)
+function printTree(height) {
+  for (let i = 1; i <= height; i++) {
+    const spaces = ' '.repeat(height - i)
+    const char = '*'.repeat(2 * i - 1)
+    console.log(spaces + char + spaces)
+  }
+}
+
+printTree(5)
+/*
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+*/
